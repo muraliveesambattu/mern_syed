@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // (function (){
+        //     console.log("I am Inside SIFE or IIFE !!!")
+        // })()
+
+        // (() => {
+        //     console.log("I am also IIFE In ES6 Approach !!!")
+        // })()
+
+        var sayHello = new Function(console.log("Hello from Function !!!"))
+        sayHello()
+    </script>
+</body>
+
+</html>

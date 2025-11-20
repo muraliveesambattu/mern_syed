@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <script>
+        // {} represents Objects in Javacript ;
+
+        // Adding Properties while Creating an Object 
+        // Literl Way of Creating Objects :- 
+        var person = {
+            fname: "Murali",
+            lname: "Krishna",
+            age: 45
+        };
+
+        console.log(person)
+
+
+        var user = {};
+
+        // Adding Properties with . notation 
+        user.fname = "Syed";
+        user.lname = "KK";
+
+        // Adding Properties to An object with [] notation
+        user["email"] = "syed@gmail.com";
+        user["city"] = "Trichy"
+
+        // console.log(user)
+        // document.getElementById("demo").innerHTML = user.fname;
+
+        // var results = user["fname"] + "<br/>" + user["lname"] + "<br/>" + user["email"] + "<br/>" + user["city"]
+        // document.getElementById("demo").innerHTML = results
+        var results = ""
+        for (a in user) {
+            results = results + user[a] + "<br>"
+        }
+        document.getElementById("demo").innerHTML = results
+
+    </script>
+</body>
+
+</html>
