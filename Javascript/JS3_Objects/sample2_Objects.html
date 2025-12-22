@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <script>
+        // Literal Way of Creating Object 
+        var person = {
+            fname: "murali"
+        }
+        person.email = "murali@gmail.com";
+        person["age"] = 45;
+
+        var results = "";
+
+        for (a in person) {
+            results = results + person[a] + "<br/>"
+        }
+        document.getElementById("demo").innerHTML = results;
+
+        // Creating Objects with Built In Constructor  Approach 
+        var student = new Object({
+            fname: "Syed",
+            email: "syed@gmail.com",
+            fullName: function () {
+                console.log("Student Name is : " + fname)
+            }
+        })
+        console.log(student)
+
+        // Creating a Custom Constructor function 
+        function Employee(fname, lname, email) {
+            this.fname = fname;
+            this.lname = lname;
+            this.email = email;
+        }
+        Employee()
+
+        var emp1 = new Employee("ram", "krishna", "ram@gmail.com");
+        console.log(emp1)
+
+        class MainStudent {
+            constructor(fname, lname, email, city) {
+                this.fname = fname;
+                this.lname = lname;
+                this.email = email;
+            }
+        }
+
+        var std1 = new MainStudent("syed", "kk", "syed@gmail.com", "trichy");
+        console.log(std1)
+    </script>
+</body>
+
+</html>

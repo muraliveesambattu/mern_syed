@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <script>
+        var persons = ["Ram", "Rahim", "Sam", "Kumar", "Abi", "Bala", "Sam", "Karim"];
+
+        // var findNames = persons.find(function (val) {
+        //     console.log(val)
+        //     return val == "Sam"
+        // })
+
+        // document.getElementById("demo").innerHTML = findNames;
+
+        // 1. If the Value is available in the Given Array , it will returned 
+        // 2. If the Value is Not available , it will return undefined
+        // 3. Find method will Stop the Excution after the First Match 
+
+         var findNames = persons.filter(function (val) {
+            console.log(val)
+            return val == "Sam"
+        })
+
+        document.getElementById("demo").innerHTML = findNames;
+
+        // 4. Filter Method will return multiple occuraces 
+
+    </script>
+</body>
+
+</html>

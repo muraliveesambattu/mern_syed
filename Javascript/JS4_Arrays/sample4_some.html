@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <script>
+        var persons = ["Ram", "Rahim", "Sam", "Kumar", "Abi", "Bala", "Karim"];
+
+        // var checknames = persons.some(function (val) {
+        //     return val.length == 2;
+        // })
+
+        // document.getElementById("demo").innerHTML = checknames;
+
+        var checknames = persons.every(function (val) {
+            return val.length >= 3
+        })
+
+        document.getElementById("demo").innerHTML = checknames;
+
+    </script>
+</body>
+
+</html>

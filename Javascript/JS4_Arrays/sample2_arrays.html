@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <script>
+        var persons = ["Ram ", "Rahim", "Sam", "Kumar", "Abi", "Bala", "Karim"];
+
+        var results = "";
+        // for (i = 0; i < persons.length; i++) {
+        //     // results = results + persons[i] + "<br/>";
+        //     results += persons[i] + "<br/>";
+        // }
+        // document.getElementById("demo").innerHTML = results;
+
+        // persons.forEach(function (val, index, arr) {
+        //     // results = results + val + "<br/>";
+        //     results += val + "<br/>"
+        // })
+        // document.getElementById("demo").innerHTML = results;
+
+
+        var newArray = persons.map(function (val) {
+            return val + "_Bangalore"
+        })
+
+        newArray.map(function (val, index, arr) {
+            // results = results + val + "<br/>";
+            results += val + "<br/>"
+        })
+        document.getElementById("demo").innerHTML = results;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <script>
+        var myNumbers = [20, 30, 50, 90, 60, 50, 40];
+        var total = myNumbers.reduce(function (a, b) {
+            return a - b
+        })
+        document.getElementById("demo").innerHTML = total;
+    </script>
+</body>
+
+</html>
