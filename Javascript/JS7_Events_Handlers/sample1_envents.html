@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <button onclick="sayhello()">Click</button> -->
+    <h2 onmouseover="changeHeadingColor()" onmouseout="revertToDefault()">Welcome Event Handlers topic !!!</h2>
+    <div id="demo"></div>
+    <hr>
+
+    <form>
+        <label for="">First Name </label>
+        <input type="text" name="" id="fname" onkeyup="validateForm()" onfocus="handleFocus()" onblur="handleReset()">
+        <br>
+        <label for="">Select State : </label>
+        <select name="" id="state" onchange="handleStateSelection()">
+            <option value="Andhra">Andhra</option>
+            <option value="Telangana">Telangana</option>
+            <option value="TamilNadu">TamilNadu</option>
+            <option value="Karnataka">Karnataka</option>
+        </select>
+        <p>Selected State is : <span></span></p>
+        <br>
+        <button disabled>Create User</button>
+    </form>
+    <script>
+        // 1. Action - Clicking the Button - It is called An Event 
+        // 2. Action Handler - It is A Rection or Next step for the Action 
+        function sayhello() {
+            document.getElementById("demo").innerHTML = "You Just Cliked the Button !!!"
+        }
+
+        function changeHeadingColor() {
+            document.querySelector("h2").style.color = "red"
+        }
+
+        function revertToDefault() {
+            document.querySelector("h2").style.color = ""
+
+        }
+
+        function validateForm() {
+            var userInput = document.getElementById("fname").value;
+            console.log(userInput)
+            if (userInput.length >= 8) {
+                document.querySelector("button").removeAttribute("disabled", true)
+            } else {
+                document.querySelector("button").setAttribute("disabled", true)
+
+            }
+        }
+
+        function handleFocus() {
+            document.getElementById("fname").style.background = "lightgrey"
+        }
+        function handleReset() {
+            document.getElementById("fname").style.background = ""
+
+        }
+
+        function handleStateSelection(){
+            var selectedState = document.getElementById("state").value;
+            document.querySelector("span").innerHTML = selectedState;
+        }
+        // Mouse Events 
+        // click
+        // dbclick
+        // mouseover
+        // mouseout
+        // Keyboard Events
+        // keypress
+        // keyup
+        // keydown
+        // Form Events
+        // focus
+        // blur
+        // change 
+
+
+    </script>
+</body>
+
+</html>

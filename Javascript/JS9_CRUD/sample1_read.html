@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="" style="width: 100%;">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>State</th>
+                <th>Zip</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        const users = [
+            {
+                fname: "Murali",
+                lname: "Veesambattu",
+                email: "murali@gmail.com",
+                state: "Karnataka",
+                zip: "560001"
+            },
+            {
+                fname: "Ravi",
+                lname: "Kumar",
+                email: "ravi.kumar@gmail.com",
+                state: "Andhra Pradesh",
+                zip: "520001"
+            },
+            {
+                fname: "Suresh",
+                lname: "Reddy",
+                email: "suresh.reddy@gmail.com",
+                state: "Telangana",
+                zip: "500081"
+            },
+            {
+                fname: "Anita",
+                lname: "Sharma",
+                email: "anita.sharma@gmail.com",
+                state: "Maharashtra",
+                zip: "400001"
+            },
+            {
+                fname: "Priya",
+                lname: "Iyer",
+                email: "priya.iyer@gmail.com",
+                state: "Tamil Nadu",
+                zip: "600001"
+            }
+        ];
+
+        for (i = 0; i < users.length; i++) {
+            var myTr = document.createElement('tr');
+            var user = users[i]
+            for (a in user) {
+                var myTd = document.createElement("td")
+                myTd.innerHTML = user[a];
+                myTr.appendChild(myTd)
+            }
+            document.querySelector('tbody').appendChild(myTr);
+        }
+    </script>
+</body>
+
+</html>

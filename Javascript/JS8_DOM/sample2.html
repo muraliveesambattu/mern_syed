@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="myHeading">Welcome to Heading 2</h2>
+    <h2 >Welcome ton DOM Topic </h2>
+    <h2 class="myList">I am Third heading in the Document !!!</h2>
+    <input type="text" name="myFirstName" id="">
+    <ul>
+        <li class="myList">Item 1</li>
+        <li class="myList">Item 2</li>
+        <li class="myList">Item 3</li>
+        <li class="myList">Item 4</li>
+    </ul>
+    <script>
+        // document.querySelector("h2").style.color = "red"
+
+        // document.querySelector("li").style.color = "green"
+
+        // var headings = document.querySelectorAll("h2");  // Created An Array of Headings h2 
+        // for (i = 0; i < headings.length; i++) {
+        //     headings[i].style.color = "red";
+        // }
+
+        // var allListItems = document.querySelectorAll("li");
+        // for(i=0;i<allListItems.length;i++){
+        //     allListItems[i].style.color = "red"
+        // }
+
+        // document.querySelector("#myHeading").style.color = "red";
+
+        // var allListItemsClass = document.getElementsByClassName("myList");
+
+        // for (i = 0; i < allListItemsClass.length; i++) {
+        //     allListItemsClass[i].style.color = "red";
+        //     allListItemsClass[i].style.fontSize = "28px"
+        // }
+
+        // document.querySelector 
+        // document.querySelectorAll 
+        // document.getElementById 
+        // document.getElementsByClassName
+        // document.getElementsByTagName
+        // document.getElementsByName 
+        
+
+        // var allheadings = document.getElementsByTagName("h2");
+        // for(i=0;i<allheadings.length;i++){
+        //     allheadings[i].style.color ="Blue"
+        // }
+
+        var allInputElements = document.getElementsByName("myFirstName");
+        allInputElements[0].style.background = "red"
+    </script>
+</body>
+
+</html>

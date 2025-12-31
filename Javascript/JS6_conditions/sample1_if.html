@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var age = 60;
+
+        // 1. If Age is less then 19 .. He is Teenager 
+        // 2. If Age is Greater than 19 , he is An Adult 
+        // 3. If age is Greater than 58 , he is Senior Citize
+
+        // if (age < 19) {
+        //     console.log("He is Teenager !!!");
+        // } else if (age > 19 && age < 58) {
+        //     console.log("He is Adult  !!!");
+        // } else {
+        //     console.log("He is Senior Citizen !!!");
+        // }
+
+        switch (true) {
+            case age < 19:
+                console.log("He is Teenager !!!");
+                break;
+
+            case age > 19 && age < 58:
+                console.log("He is Adult  !!!");
+                break;
+            default:
+                console.log("He is Senior Citizen !!!");
+                break;
+        }
+
+
+
+    </script>
+</body>
+
+</html>

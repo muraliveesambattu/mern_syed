@@ -9,10 +9,26 @@
 
 <body>
     <script>
-        var myNames = ["Ram", "Rahim", "Sam", ["Krishna", "Karim", "Ramesh", ["Kumar", "Raghu", "Kiran"]]]
-        console.log(myNames.flat());
-        console.log(myNames.flatMap())
-        console
+        var myNames = ["Ram", "Rahim", "Sam", ["Krishna", "Karim", "Ramesh", ["Kumar", "Raghu", "Kiran", ["AA", "BB", "KK"]]]]
+        // console.log(myNames.flat());
+        // console.log(myNames.flatMap((item)=>item))
+        // console.log(myNames.flat(2))
+
+        function flatArray(myNames) {
+            let result = []; // Created An Empty Array 
+
+            myNames.forEach(function (val) {
+                if (Array.isArray(val)) {
+                    console.log(val)
+                    result = result.concat(flatArray(val))
+                } else {
+                    result.push(val)
+                }
+            })
+            return result
+        }
+
+        console.log(flatArray(myNames))
     </script>
 </body>
 
