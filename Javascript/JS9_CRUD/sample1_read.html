@@ -5,9 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #myUserForm {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
+    <button onclick="handleCreateUser()">Create User</button>
     <table border="" style="width: 100%;">
         <thead>
             <tr>
@@ -16,10 +22,27 @@
                 <th>Email</th>
                 <th>State</th>
                 <th>Zip</th>
+                <th>Delete</th>
+                <th>Edit</th>
             </tr>
         </thead>
         <tbody></tbody>
     </table>
+    <hr>
+    <form id="myUserForm">
+        <label for="">First Name : </label>
+        <input type="text" name="" id="fname"> <br>
+        <label for="">Last Name : </label>
+        <input type="text" name="" id="lname"> <br>
+        <label for="">Email : </label>
+        <input type="text" name="" id="email"> <br>
+        <label for="">State : </label>
+        <input type="text" name="" id="state"> <br>
+        <label for="">Zip : </label>
+        <input type="text" name="" id="zip"> <br>
+        <button type="button" onclick="updateUser()" id="updateUserBtn">Update User</button>
+        <button type="button" onclick="createUser()" id="createUserBtn">Create User</button>
+    </form>
     <script>
         const users = [
             {
@@ -59,15 +82,99 @@
             }
         ];
 
-        for (i = 0; i < users.length; i++) {
-            var myTr = document.createElement('tr');
-            var user = users[i]
-            for (a in user) {
-                var myTd = document.createElement("td")
-                myTd.innerHTML = user[a];
-                myTr.appendChild(myTd)
+        function displayUsers() {
+            document.querySelector("tbody").innerHTML = "";
+            for (i = 0; i < users.length; i++) {
+                var myTr = document.createElement('tr');
+                var user = users[i];
+
+                // The following loop is responsible to create each row
+                for (a in user) {
+                    var myTd = document.createElement("td")
+                    myTd.innerHTML = user[a];
+                    myTr.appendChild(myTd)
+                }
+
+                // 1. Add Delete Button to the tr 
+                var deleteTd = document.createElement("td");
+                var deleteBtn = document.createElement("button");
+                deleteBtn.setAttribute("onclick", "handleDelete(" + i + ")")
+                deleteBtn.innerHTML = "Delete";
+                deleteTd.appendChild(deleteBtn)
+                myTr.appendChild(deleteTd);
+
+                // Create Edit Button 
+                var editTd = document.createElement('td');
+                var editBtn = document.createElement("button");
+                editBtn.setAttribute("onclick", "handleEdit(" + i + ")")
+                editBtn.innerHTML = "Edit"
+                editTd.appendChild(editBtn)
+                myTr.appendChild(editTd);
+                document.querySelector('tbody').appendChild(myTr);
             }
-            document.querySelector('tbody').appendChild(myTr);
+        }
+
+        displayUsers()
+
+        function handleDelete(i) {
+            users.splice(i, 1)
+            displayUsers();
+        };
+
+        var editIndex;
+        function handleEdit(i) {
+            editIndex = i;
+            document.getElementById("myUserForm").style.display = "block";
+
+            document.getElementById("updateUserBtn").style.display = "block";
+            document.getElementById("createUserBtn").style.display = "none";
+            var user = users[i];
+            console.log(user)
+            for (a in user) {
+                document.getElementById(a).value = user[a]
+            }
+
+        };
+
+        function updateUser() {
+            var user = {
+                fname: "",
+                lname: "",
+                email: "",
+                state: "",
+                zip: ""
+            }
+            for (a in user) {
+                user[a] = document.getElementById(a).value
+            }
+            users[editIndex] = user;
+            displayUsers();
+            document.getElementById("myUserForm").style.display = "none";
+
+        }
+
+        function handleCreateUser() {
+            document.getElementById("myUserForm").style.display = "block";
+            document.getElementById("updateUserBtn").style.display = "none";
+            document.getElementById("createUserBtn").style.display = "block";
+
+        }
+
+        function createUser() {
+            var user = {
+                fname: "",
+                lname: "",
+                email: "",
+                state: "",
+                zip: ""
+            }
+            for (a in user) {
+                user[a] = document.getElementById(a).value
+            }
+            users.push(user);
+            displayUsers();
+            document.getElementById("myUserForm").style.display = "none";
+
         }
     </script>
 </body>
