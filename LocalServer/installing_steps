@@ -1,0 +1,6 @@
+1.npm init --yes
+2.npm i json-server
+3.Create a file called db.json 
+4.Create end points 
+5.Run the Server  . 
+    json-server --watch db.json

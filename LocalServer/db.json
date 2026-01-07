@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fname": "Murali Krishna",
+      "lname": "Veesambattu",
+      "email": "murali@gmail.com",
+      "state": "Karnataka",
+      "zip": "560001"
+    },
+    {
+      "id": 2,
+      "fname": "Ravi SS",
+      "lname": "Kumar",
+      "email": "ravi.kumar@gmail.com",
+      "state": "Andhra Pradesh",
+      "zip": "520001"
+    },
+    {
+      "id": 3,
+      "fname": "Suresh MMM",
+      "lname": "Reddy",
+      "email": "suresh.reddy@gmail.com",
+      "state": "Telangana",
+      "zip": "500081"
+    },
+    {
+      "id": 4,
+      "fname": "Anita NKKM",
+      "lname": "Sharma",
+      "email": "anita.sharma@gmail.com",
+      "state": "Maharashtra",
+      "zip": "400001"
+    }
+  ]
+}
