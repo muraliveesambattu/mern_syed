@@ -2,35 +2,35 @@
   "users": [
     {
       "id": 1,
-      "fname": "Murali Krishna",
+      "fname": "Murali",
       "lname": "Veesambattu",
-      "email": "murali@gmail.com",
-      "state": "Karnataka",
-      "zip": "560001"
-    },
-    {
-      "id": 2,
-      "fname": "Ravi SS",
-      "lname": "Kumar",
-      "email": "ravi.kumar@gmail.com",
-      "state": "Andhra Pradesh",
-      "zip": "520001"
-    },
-    {
-      "id": 3,
-      "fname": "Suresh MMM",
-      "lname": "Reddy",
-      "email": "suresh.reddy@gmail.com",
+      "email": "murali.veesambattu@gmail.com",
       "state": "Telangana",
       "zip": "500081"
     },
     {
-      "id": 4,
-      "fname": "Anita NKKM",
+      "id": 2,
+      "fname": "Anjali",
       "lname": "Sharma",
-      "email": "anita.sharma@gmail.com",
+      "email": "anjali.sharma@example.com",
+      "state": "Karnataka",
+      "zip": "560001"
+    },
+    {
+      "id": 3,
+      "fname": "Rahul",
+      "lname": "Mehta",
+      "email": "rahul.mehta@example.com",
       "state": "Maharashtra",
       "zip": "400001"
+    },
+    {
+      "fname": "Priya New",
+      "lname": "Nair",
+      "email": "priya.nair@example.com",
+      "state": "Kerala",
+      "zip": "682001",
+      "id": 4
     }
   ]
 }
