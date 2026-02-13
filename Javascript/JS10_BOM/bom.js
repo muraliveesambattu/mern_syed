@@ -19,8 +19,8 @@ function createUser() {
         email: document.getElementById("email").value,
         state: document.getElementById("state").value,
         subjects: [],
-        // dob: new Date(document.getElementById("dob").value).toLocaleDateString(),
-        login: new Date(document.getElementById("login").value).toLocaleTimeString()
+        dob: new Date(document.getElementById("dob").value).toLocaleDateString(),
+        login: document.getElementById("login").value
     }
 
     const allRadioButtons = document.getElementsByName("gender");
@@ -38,5 +38,24 @@ function createUser() {
         }
     })
 
-    window.location.href = "usersTable.html"
+    console.log(userObj);
+
+    // fetch - POST , DELETE , UPDATE , GET
+
+    fetch("http://localhost:3000/latestUsers", {
+        method: "POST",
+        body: JSON.stringify(userObj),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (data) {
+            console.log("User ", data);
+            window.location.href = "usersTable.html"
+        })
+
+
 }

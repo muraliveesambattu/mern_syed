@@ -32,5 +32,51 @@
       "zip": "682001",
       "id": 4
     }
+  ],
+  "latestUsers": [
+    {
+      "userid": 798,
+      "fname": "SEKHAR",
+      "password": "Veesambattu",
+      "email": "murali.veesambattu@gmail.com",
+      "state": "TN",
+      "subjects": [
+        "Java"
+      ],
+      "dob": "14/06/2000",
+      "login": "20:43",
+      "gender": "Male",
+      "id": 1
+    },
+    {
+      "userid": 677,
+      "fname": "Murali",
+      "password": "infotech",
+      "email": "vmurali100@gmail.com",
+      "state": "TN",
+      "subjects": [
+        "Python",
+        "JavaScript"
+      ],
+      "dob": "15/06/1988",
+      "login": "20:42",
+      "gender": "Male",
+      "id": 2
+    },
+    {
+      "userid": 826,
+      "fname": "Ram",
+      "password": "rrr",
+      "email": "ram@gmail.com",
+      "state": "AP",
+      "subjects": [
+        "Python",
+        "JavaScript"
+      ],
+      "dob": "13/07/2017",
+      "login": "20:57",
+      "gender": "Male",
+      "id": 3
+    }
   ]
 }
